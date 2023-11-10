@@ -20,22 +20,22 @@ impl Game for BaldursGame3 {
     fn read_caption_of_conversation(&self) -> String {
 
         let read_caption = read_camption::ReactCaption::new(self.process_handle);
-        let addr1 = read_caption.read_offset(&self.base_addr_module,"057206A8");
+        let addr1 = read_caption.read_offset(&self.base_addr_module,"057BDF48");
     
         let read_caption = read_camption::ReactCaption::new(self.process_handle);
-        let addr2 = read_caption.read_offset(&addr1,"28");
+        let addr2 = read_caption.read_offset(&addr1,"390");
         
         let read_caption = read_camption::ReactCaption::new(self.process_handle);
-        let addr2 = read_caption.read_offset(&addr2,"D0");
+        let addr2 = read_caption.read_offset(&addr2,"188");
 
         let read_caption = read_camption::ReactCaption::new(self.process_handle);
-        let addr2 = read_caption.read_offset(&addr2,"60");
+        let addr2 = read_caption.read_offset(&addr2,"38");
+
+        let read_caption = read_camption::ReactCaption::new(self.process_handle);
+        let addr2 = read_caption.read_offset(&addr2,"158");
 
         let read_caption = read_camption::ReactCaption::new(self.process_handle);
         let addr2 = read_caption.read_offset(&addr2,"340");
-
-        let read_caption = read_camption::ReactCaption::new(self.process_handle);
-        let addr2 = read_caption.read_offset(&addr2,"1D8");
 
         let read_caption = read_camption::ReactCaption::new(self.process_handle);
         let addr2 = read_caption.read_offset(&addr2,"90");
