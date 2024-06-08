@@ -63,7 +63,8 @@ impl Process {
 
         let mut id_proccess:i32 = 0;
         for_each_process(|id: u32, name: &Path| {
-            if name.display().to_string()[..].contains(name_process) {
+            let name_of_proccess = &name.display().to_string()[..];
+            if name_of_proccess.contains(name_process) {
                 id_proccess = id as i32;
             }
         }).unwrap();

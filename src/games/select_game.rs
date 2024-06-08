@@ -5,8 +5,9 @@ fn select_number_of_game() -> i32 {
 
     loop {
         println!("
-        1-StartField
-        2-Baldur's Gate 3
+            1-StartField
+            2-Baldur's Gate 3
+            3-Red Dead Redemption 2
         ");
     
         let mut input= String::new();
@@ -33,6 +34,9 @@ pub fn select_game() -> Box<dyn Game>{
             result = Box::new(games::starfield::StarField::new());
         }else if input == 2 {
             result = Box::new(games::baldurs_game_3::BaldursGame3::new());
+        
+        }else if input == 3 {
+            result = Box::new(games::red_dead_2::RedDead2::new());
         }else{
             println!("Escolha um game válido");
             continue;
